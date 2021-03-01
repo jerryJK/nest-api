@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%;  /* 62.5% of 16px = 10px */
+}
+body {
+  background: #ebeff2;
+  color: rgb(53, 53, 53);
+  font-family: 'Open sans', Sans-serif, serif;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.box {
+  background: #fff;
+  width: 55rem;
+  padding: 4rem 4rem 2rem 4rem;
+  margin-top: 8rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 60px rgba(0,0,0,.12);
+}
+.box img {
+  width: 20rem;
+}
+.box span {
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+.box h2 {
+  margin: 3rem 0 2rem 0;
+  color: #f66060;
+}

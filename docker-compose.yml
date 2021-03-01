@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    ports:
+      - 4000:4000
+
+  db:
+    image: postgres:11.7
+    restart: always
+    environment:
+      PGDATA: /var/lib/postgresql/data/cea-data
+      POSTGRES_DB: cea
+      POSTGRES_PASSWORD: cea
+      POSTGRES_USER: cea
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data/cea-data
+    ports:
+      - 5432:5432
+
+  redis:
+    image: redis:alpine3.12
+
+volumes:
+  db_data: {}
