@@ -1,0 +1,44 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type GetUserResponseDto {
+  id: String!
+  firstName: String!
+  lastName: String!
+  email: String!
+  confirmed: Boolean!
+}
+
+type HttpStatusResponse {
+  status: Float!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type LoginResponseDto {
+  status: Float!
+  token: String!
+}
+
+type Mutation {
+  signup(data: SignupInput!): HttpStatusResponse!
+  login(data: LoginInput!): LoginResponseDto!
+  resendConfirmationEmail(email: String!): HttpStatusResponse!
+}
+
+type Query {
+  users: [GetUserResponseDto!]!
+  user(id: String!): GetUserResponseDto!
+  currentUser: GetUserResponseDto!
+}
+
+input SignupInput {
+  firstName: String!
+  lastName: String!
+  password: String!
+  email: String!
+}
