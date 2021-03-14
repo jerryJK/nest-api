@@ -18,7 +18,7 @@ ENV NODE_ENV="production"
 COPY package.json yarn.lock ./
 RUN yarn
 
-# Stage 4 - Release
+# Stage 3 - Release
 FROM node:${NODE_TAG} as api
 WORKDIR /usr/src/app
 RUN mkdir /usr/src/app/db
